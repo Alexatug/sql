@@ -54,7 +54,30 @@ The store wants to keep customer addresses. Propose two architectures for the CU
 **HINT:** search type 1 vs type 2 slowly changing dimensions. 
 
 ```
-Your answer...
+CUSTOMER_ADDRESS table
+Architecture 1: Retaining Changes (Type2)
+customer_id (Primary Key)
+address_line1
+address_line2
+city
+province
+postal_code
+country
+updated_date
+
+Architecture 2: Retaining Changes (Type2)
+address_id (Primary Key)
+customer_id
+address_line1
+address_line2
+city
+province
+postal_code
+country
+effective_date
+end_date
+is_current
+
 ```
 
 ***
